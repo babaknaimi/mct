@@ -5,19 +5,36 @@
 
 using namespace Rcpp;
 
-// rcpp_hello_world
-List rcpp_hello_world();
-RcppExport SEXP _mct_rcpp_hello_world() {
+// cellNeighbours
+IntegerVector cellNeighbours(int cell, int nr, int nc);
+RcppExport SEXP _mct_cellNeighbours(SEXP cellSEXP, SEXP nrSEXP, SEXP ncSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    rcpp_result_gen = Rcpp::wrap(rcpp_hello_world());
+    Rcpp::traits::input_parameter< int >::type cell(cellSEXP);
+    Rcpp::traits::input_parameter< int >::type nr(nrSEXP);
+    Rcpp::traits::input_parameter< int >::type nc(ncSEXP);
+    rcpp_result_gen = Rcpp::wrap(cellNeighbours(cell, nr, nc));
+    return rcpp_result_gen;
+END_RCPP
+}
+// group
+IntegerVector group(NumericVector x, int nr, int nc);
+RcppExport SEXP _mct_group(SEXP xSEXP, SEXP nrSEXP, SEXP ncSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type nr(nrSEXP);
+    Rcpp::traits::input_parameter< int >::type nc(ncSEXP);
+    rcpp_result_gen = Rcpp::wrap(group(x, nr, nc));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_mct_rcpp_hello_world", (DL_FUNC) &_mct_rcpp_hello_world, 0},
+    {"_mct_cellNeighbours", (DL_FUNC) &_mct_cellNeighbours, 3},
+    {"_mct_group", (DL_FUNC) &_mct_group, 3},
     {NULL, NULL, 0}
 };
 

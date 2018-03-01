@@ -3,20 +3,18 @@
 \alias{mct}
 \docType{package}
 \title{
-  A short title line describing what the package does
+  Map Comparison Tools
 }
 \description{
-  A more detailed description of what the package does. A length
-  of about one to five lines is recommended.
+  This is a package with functionalities to quantify the changes between two spatial maps (two raster maps).
 }
 \details{
-  This section should provide a more detailed overview of how to use the
-  package, including the most important functions.
+  Several methods have been implemented to quantify the changes between two maps.
 }
 \author{
-Your Name, email optional.
+Babak Naimi
 
-Maintainer: Your Name <your@email.com>
+Maintainer: Babak Naimi <naimi.b@gmail.com>
 }
 \references{
   This optional section can contain literature or other references for

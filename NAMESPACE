@@ -1,3 +1,5 @@
 useDynLib(mct, .registration=TRUE)
+import(sp, methods)
+importFrom(raster, as.matrix)
 exportPattern("^[[:alpha:]]+")
 importFrom(Rcpp, evalCpp)

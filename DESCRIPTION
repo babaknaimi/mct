@@ -1,11 +1,15 @@
 Package: mct
 Type: Package
-Title: What the Package Does in One 'Title Case' Line
-Version: 0.0-1
-Date: 2018-02-26
-Author: Your Name
-Maintainer: Your Name <your@email.com>
-Description: One paragraph description of what the package does as one or more full sentences.
+Title: Map Comparison Tools
+Version: 0.0-5
+Date: 2018-03-01
+Author: Babak Naimi
+Maintainer: Babak Naimi <naimi.b@gmail.com>
+Depends: methods, sp (>= 1.0-13), raster
+Date: 2018-03-02
+Author: Babak Naimi
+Maintainer: Babak Naimi <naimi.b@gmail.com>
+Description: A framework that provides functionalities for comparing spatial maps (e.g., land use maps between two times) to quantify the differences.
 License: GPL (>= 2)
 Imports: Rcpp (>= 0.12.14)
 LinkingTo: Rcpp
